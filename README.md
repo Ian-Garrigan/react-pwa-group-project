@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### References
+Meal API https://www.themealdb.com/api.php
+Select formatting https://react.dev/reference/react-dom/components/select#reading-the-select-box-value-when-submitting-a-form
+CSS https://react-bootstrap.netlify.app/docs/components/cards
