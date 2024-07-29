@@ -5,11 +5,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function Mains() {
 
   const [categories, setCategories] = useState([]);
   const [selectedItem, setItem] = useState("");
+  const [itemList, setItemList] = useState([]);
 
   useEffect(() => {
     var fetchData = async () => {
@@ -21,13 +24,20 @@ function Mains() {
       );
 
       setCategories(filteredCategories);
-      console.log(filteredCategories);
+      // console.log(filteredCategories);
     }
 
     fetchData();
   }, []);
 
-  console.log({selectedItem});
+  // console.log({selectedItem});
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    var response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=', { params: { c: selectedItem } });
+    console.log(response.data.meals);
+    setItemList(response.data.meals);
+  }
 
   return (
     <Container fluid>
@@ -49,10 +59,50 @@ function Mains() {
             }
           </select>
           <p>Your Choice: {selectedItem}</p>
+          <Button onClick={handleSubmit}>Search</Button>
         </Col>
+      </Row>
+      <Row>
+        {
+          itemList.map(function (i, index) {
+            return (
+              <Card key={index} style={{ width: '18rem' }}>
+                    <Card.Body>
+                      <Card.Img variant="top" src={i.strMealThumb} />
+                      <Card.Title>{i.strMeal}</Card.Title>
+                      <Card.Text>
+                        Meal ID: {i.idMeal}
+                      </Card.Text>
+                      <Button variant="primary">Go somewhere</Button>
+                      <a href={`https://www.themealdb.com/meal/${i.idMeal}`} target='_blank'>Link</a>
+                    </Card.Body>
+                  </Card>
+            );
+          })
+        }
       </Row>
     </Container>
   )
+
+  // if ({selectedItem} == "Beef") {
+    
+  // } else if ({selectedItem} == "Chicken") {
+
+  // } else if ({selectedItem} == "Lamb") {
+
+  // } else if ({selectedItem} == "Miscellaneous") {
+
+  // } else if ({selectedItem} == "Pasta") {
+
+  // } else if ({selectedItem} == "Pork") {
+
+  // } else if ({selectedItem} == "Seafood") {
+
+  // } else if ({selectedItem} == "Side") {
+
+  // } else if ({selectedItem} == "Vegan") {
+
+  // } else if ({})
 };
 
 export default Mains;
