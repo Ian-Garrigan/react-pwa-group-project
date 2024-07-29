@@ -1,8 +1,8 @@
 /*Filename:Wines.js*/
 
 import { Container, Col, Row, Button, } from "react-bootstrap";
-import Input from "../components/Input";
 import Drinks from "../components/WineCards";
+import WinePairing from "../components/WinePairing";
 
 function Wines(){
   return(
@@ -22,11 +22,7 @@ function Wines(){
         <Col lg={4}>
         </Col>
         <Col className="justify-content-center align-items-center text-center" lg={4}>
-          <p className="heading text-underlined">Wine Selector</p>
-          <p>Make the occasion even more special with the right wine pairing for your meal.</p>
-          <p>Please enter your main course selection in the box below</p>
-          <Input />
-          
+          <WinePairing />
         </Col>
         <Col lg={4}>
         </Col>
