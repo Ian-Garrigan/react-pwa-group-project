@@ -53,7 +53,7 @@ const WinePairing = () => {
                     </div>
                     <div className="form-group">
                         <select onChange={(e) => handleFoodSelect(e.target.value)} value={food}>
-                            <option value="steak">Steak</option>
+                            <option value="steak">Beef</option>
                             <option value="lamb">Lamb</option>
                             <option value="chicken">Chicken</option>
                             <option value="fish">Fish</option>
