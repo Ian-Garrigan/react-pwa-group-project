@@ -19,12 +19,12 @@ function Home(){
         <Col lg={4}></Col>
         <Col className="justify-content-center align-items-center" lg={4}>
           <p className="heading text-underlined">Hello Chef</p>
-          <ul>
+          <ol className="ol">
             <li>Let us prepare a delicious meal for your special occassion in the comfort of your own home.</li>
             <br></br>
             <li>We look after the dinner, you enjoy the party!</li>
             <br></br>
-          </ul>
+          </ol>
         </Col>
         <Col lg={4}></Col>
       </Row>
