@@ -19,12 +19,12 @@ function Wines(){
         </Col>
       </Row>
       <Row>
-        <Col lg={4}>
+        <Col lg={3}>
         </Col>
-        <Col className="justify-content-center align-items-center text-center" lg={4}>
+        <Col className="justify-content-center align-items-center text-center" lg={6}>
           <WinePairing />
         </Col>
-        <Col lg={4}>
+        <Col lg={3}>
         </Col>
       </Row>
     </Container>
