@@ -19,12 +19,12 @@ function Home(){
         <Col lg={4}></Col>
         <Col className="justify-content-center align-items-center" lg={4}>
           <p className="heading text-underlined">Hello Chef</p>
-          <ol className="ol">
+          <ul className="ol">
             <li>Let us prepare a delicious meal for your special occassion in the comfort of your own home.</li>
             <br></br>
             <li>We look after the dinner, you enjoy the party!</li>
             <br></br>
-          </ol>
+          </ul>
         </Col>
         <Col lg={4}></Col>
       </Row>
@@ -39,13 +39,13 @@ function Home(){
         <Col lg={4}></Col>
         <Col lg={4} className="justify-content-center align-items-center">
         <p className="heading text-underlined">How it works</p>
-        <ol>
+        <ul>
           <li>Select your starter</li>
           <li>Select your main course</li>
           <li>Select your dessert</li>
           <li>Find the best wine to suit your meal</li>
           <li>Place your order and we will do the rest</li>
-        </ol>
+        </ul>
         <br></br>
         </Col>
         <Col lg={4}></Col>

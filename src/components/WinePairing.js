@@ -89,7 +89,7 @@ const WinePairing = () => {
                 <p className="heading text-underlined">Wine Pairing</p>
                 <p>Make the occasion even more special with the right wine pairing for your meal.</p>
                 <ol className="ol">
-                    <li>Select your main course from the drop-down menu</li>
+                    <li>Select your <strong>Mains</strong> from the drop-down menu</li>
                     <li>Click <strong>Find Wine</strong> to see expert recommendations</li>
                     <li>Click <strong>Select Wine</strong> to add your choice to the menu</li>
                 </ol>
