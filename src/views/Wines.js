@@ -1,5 +1,6 @@
 /*Filename:Wines.js*/
 
+import { Link } from "react-router-dom";
 import { Container, Col, Row, Button, } from "react-bootstrap";
 import Drinks from "../components/WineCards";
 import WinePairing from "../components/WinePairing";
@@ -23,6 +24,9 @@ function Wines(){
         </Col>
         <Col className="justify-content-center align-items-center text-center" lg={6}>
           <WinePairing />
+          <Link to="/Booking">
+        <Button className="button">Proceed to booking</Button>
+        </Link>
         </Col>
         <Col lg={3}>
         </Col>

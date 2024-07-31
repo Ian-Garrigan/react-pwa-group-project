@@ -53,7 +53,7 @@ function Home(){
       <Row className="text-center">
         <Col>  
         <Link to="/Starters">
-          <Button className="button">Get started</Button>
+          <Button className="button">Select Starter</Button>
           </Link>
           <br></br>
           <br></br>
