@@ -27,6 +27,9 @@ function Wines(){
           <Link to="/Booking">
         <Button className="button">Proceed to booking</Button>
         </Link>
+        <br></br>
+        <br></br>
+        <br></br>
         </Col>
         <Col lg={3}>
         </Col>

@@ -86,6 +86,15 @@ li::marker{
   border-color: #333652;
 }
 
+.selectwine-button{
+  background-color: #FAD02C;
+  border-radius: 20px;
+  color:#333652;
+  font-weight:500;
+  border-color: #333652;
+  margin-right: 10px;
+}
+
 .btn-primary:hover{
   background-color: #333652;
   border-color: #FAD02C;
