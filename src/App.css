@@ -57,13 +57,11 @@ li::marker{
 
 .input{
   border-radius: 15px;
-  text-align: center;
+  text-align: left;
   border-color: #333652;
 }
 
-.option{
-  text-align: left;
-}
+
 .custom-card{
   box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.45);  
   padding: 10px;
@@ -86,7 +84,7 @@ li::marker{
   border-color: #333652;
 }
 
-.selectwine-button{
+.button-margin{
   background-color: #FAD02C;
   border-radius: 20px;
   color:#333652;

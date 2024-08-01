@@ -94,11 +94,9 @@ const WinePairing = () => {
                     <li>Click <strong>Select Wine</strong> to add your choice to the menu</li>
                 </ol>
                 <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                    </div>
-                    <div className="form-group">
+                   <div className="form-group">
                         <select className="input" onChange={(e) => handleFoodSelect(e.target.value)} value={food}>
-                        <option className="option" value=""></option>
+                            <option className="option" value=""></option>
                             <option className="option" value="beef">Beef</option>
                             <option className="option" value="lamb">Lamb</option>
                             <option className="option" value="chicken">Chicken</option>
@@ -127,7 +125,7 @@ const WinePairing = () => {
                                         {wine.description}
                                         <br></br>
                                         <br></br>
-                                        <Button className="selectwine-button" onClick={() => handleWineSelect(wine)}>
+                                        <Button className="button-margin" onClick={() => handleWineSelect(wine)}>
                                             Select Wine
                                         </Button>
                                         <Button className="button" onClick={() => getWinePairing()}>
