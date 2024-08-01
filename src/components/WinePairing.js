@@ -5,7 +5,7 @@ import redwine from "../images/redwine.jpg"
 import whitewine from "../images/whitewine.jpg"
 
 const WinePairing = () => {
-    const [food, setFood] = useState(''); 
+    const [food, setFood] = useState('beef'); 
     const [winePairing, setWinePairing] = useState(null);
     const [error, setError] = useState(null);
     const [selectedWine, setSelectedWine] = useState(null);
@@ -96,7 +96,6 @@ const WinePairing = () => {
                 <form onSubmit={handleSubmit}>
                    <div className="form-group">
                         <select className="input" onChange={(e) => handleFoodSelect(e.target.value)} value={food}>
-                            <option className="option" value=""></option>
                             <option className="option" value="beef">Beef</option>
                             <option className="option" value="lamb">Lamb</option>
                             <option className="option" value="chicken">Chicken</option>
