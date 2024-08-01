@@ -128,7 +128,7 @@ const WinePairing = () => {
                                             Select Wine
                                         </Button>
                                         <Button className="button" onClick={() => getWinePairing()}>
-                                            See More
+                                            Alternative option for {food}
                                         </Button>
                                     </div>
                                 </div>
