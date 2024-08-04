@@ -1,3 +1,6 @@
+//Author: Conor Mulvihill
+//Date 4th August 2024
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
@@ -9,6 +12,7 @@ function Mains_cards() {
     const [itemList, setItemList] = useState([]);
     const [error, setError] = useState(null);
 
+    // Function that calls API on page loading, retrieves food API for starters from thmealdb
     useEffect(() => {
         try {
             var fetchData = async () => {
@@ -28,15 +32,15 @@ function Mains_cards() {
 
     }, []);
 
+    // Function that handles submit from dropdown, filters API call to mealdb from selection.
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-
+            var response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=', { params: { c: selectedItem } });
+        setItemList(response.data.meals);
         } catch (error) {
             setError('Could not retrieve information. Please try again!');
         }
-        var response = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=', { params: { c: selectedItem } });
-        setItemList(response.data.meals);
     }
     return (
         <Container fluid>
@@ -44,6 +48,7 @@ function Mains_cards() {
                 <Col lg={3}></Col>
                 <Col className="justify-content-center align-items-center text-center" lg={6}>
                     <h2 className="text-center">Select from our wide range of categories: </h2>
+                    {/* error message div */}
                     {error && <div className="alert">{error}</div>}
                     <select className="" value={selectedItem} onChange={e => setItem(e.target.value)}>
                         <option value="def">Please select an option</option>

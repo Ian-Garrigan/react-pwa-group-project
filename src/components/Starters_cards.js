@@ -1,3 +1,6 @@
+//Author: Conor Mulvihill
+//Date 4th August 2024
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Button, Row, Col, Card } from 'react-bootstrap';
@@ -6,6 +9,7 @@ function Starters_cards() {
     const [starters, setStarters] = useState([]);
     const [error, setError] = useState(null);
 
+    // Function that calls API on page loading, retrieves food API for starters from thmealdb
     useEffect(() => {
         try {
             var fetchData = async () => {
@@ -33,6 +37,7 @@ function Starters_cards() {
                                         <Card.Img variant="top" src={i.strMealThumb} />
                                         <Card.Title>{i.strMeal}</Card.Title>
                                         <Card.Text>
+                                        {/* error message div */}
                                         {error && <div className="alert">{error}</div>}
                                         </Card.Text>
                                         <a href={`https://www.themealdb.com/meal/${i.idMeal}`} target='_blank'>
