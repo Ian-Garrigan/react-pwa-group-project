@@ -53,10 +53,12 @@ function App() {
         <Row>
         <hr className="hr"></hr>
           <Col lg={3}></Col>
-          <Col lg={6} className='text-center'>
+          <Col lg={6} className='text-center footer'>
             <div>
               <h2 className='heading text-underlined'>Hello Chef</h2>
               <p>Hello Chef&#174; is a trademark of the Better Code Better Food company.</p>
+              <p>All of our food is sourced locally and organically.</p>
+              <p>Hello Chef&#174; is regulated by <a href='https://www.bordbia.ie/' target='_blank'>Bord Bia</a> and the <a href='https://www.fsai.ie/home' target='_blank'>Food Safety Authority</a></p>
               <p>Contact us at: <a href='mailto:about@hello.chef.com'>about@hello.chef.com</a></p>
               <p>Mayor Street Lower,</p>
               <p>International Financial Services Centre,</p>
