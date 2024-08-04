@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { Button, Card, Row, Col, Container } from 'react-bootstrap';
+//Filename: WinePairing.js
+//Author: Rita O'Brien
+//Date 4th August 2024
+
+import React, { useState } from 'react'; //for managing state management
+import axios from 'axios'; //for API call to Spoonacular
+import { Button, Card, Row, Col, Container } from 'react-bootstrap';//bootstrap
 import redwine from "../images/redwine.jpg"
 import whitewine from "../images/whitewine.jpg"
 
 const WinePairing = () => {
-    const [food, setFood] = useState('beef'); 
-    const [winePairing, setWinePairing] = useState(null);
-    const [error, setError] = useState(null);
-    const [selectedWine, setSelectedWine] = useState(null);
+    const [food, setFood] = useState('beef'); //holds the mains chosen by the user, defaults to beef
+    const [winePairing, setWinePairing] = useState(null); //stores the response from the API call to Spoonacular
+    const [error, setError] = useState(null);//stores error message if the API call fails
+    const [selectedWine, setSelectedWine] = useState(null);//stores the wine that the user selects
 
+    //call to Spoonacular API for the wine pairing - the food string selected by the user is input into the call
     const getWinePairing = async () => {
         try {
             const response = await axios.get(`https://api.spoonacular.com/food/wine/pairing`, {
@@ -18,32 +23,34 @@ const WinePairing = () => {
                     apiKey: 'd43532917aa549bfbaf75ff1d5de62b9'  // Spoonacular API key
                 }
             });
-            setWinePairing(response.data);
-            setError(null);
+            setWinePairing(response.data);//successful API call results in response data being updated
+            setError(null);//any errors are reset
         } catch (err) {
             setError('Could not fetch wine pairing information.');
-            setWinePairing(null);
+            setWinePairing(null);//handles an API call failure - message to user and wine pairing info cleared
         }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        getWinePairing();
+        getWinePairing();//makes API call
     };
 
     const handleWineSelect = (wine) => {
         setSelectedWine(null);
-        setSelectedWine(wine);
+        setSelectedWine(wine);//updates with the wine selected by the user
         
     };
 
     const handleFoodSelect = (selectedFood) => {
-        
-        setFood(selectedFood);
-        setWinePairing(null); // Clear found wine when a new food item is selected
+        setFood(selectedFood);//stores mains selected by the user
+        setWinePairing(null); //if the user changes their mains selection, the wine info displayed for their previous choice is cleared from the results box as well as any wine selected by the user
         setSelectedWine(null);
     };
-
+    
+    //text from the API call didn't read very well in some cases
+    //missing images or poor images for some results 
+    //switch statement handles the display info given to the user based on their food selection along with generic image based on red or white wine suitability
     const getFoodMessage = () => {
         switch (food) {
             case 'beef':
@@ -128,7 +135,7 @@ const WinePairing = () => {
                                             Select Wine
                                         </Button>
                                         <Button className="button" onClick={() => getWinePairing()}>
-                                            Alternative option for {food}
+                                            Alternative option for {food} 
                                         </Button>
                                     </div>
                                 </div>

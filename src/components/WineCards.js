@@ -1,3 +1,9 @@
+//Filename: WineCards.js
+//Author: Rita O'Brien
+//Date 4th August 2024
+
+//used for generating row of images on Wines page
+
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 

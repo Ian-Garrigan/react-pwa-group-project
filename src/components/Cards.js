@@ -1,3 +1,7 @@
+////Filename: Cards.js
+//Author: Rita O'Brien
+//Date 4th August 2024
+
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 

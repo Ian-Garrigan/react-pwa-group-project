@@ -1,9 +1,11 @@
-/*Filename:Home.js*/
+//Filename: Home.js
+//Author: Rita O'Brien
+//Date 4th August 2024
 
 import { Link } from "react-router-dom";
 import { Container, Col, Row, Button, } from "react-bootstrap";
-import Cards from "../components/Cards";
-import Cards2 from "../components/Cards2";
+import Cards from "../components/Cards";//first row of images
+import Cards2 from "../components/Cards2"; //second row of images
 
 function Home(){
   return(

@@ -1,9 +1,11 @@
-/*Filename:Wines.js*/
+//Filename: Wines.js
+//Author: Rita O'Brien
+//Date 4th August 2024
 
 import { Link } from "react-router-dom";
 import { Container, Col, Row, Button, } from "react-bootstrap";
 import Drinks from "../components/WineCards";
-import WinePairing from "../components/WinePairing";
+import WinePairing from "../components/WinePairing";//component that controls API call to Spoonacular for wine pairing info
 
 function Wines(){
   return(
