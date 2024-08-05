@@ -7,7 +7,7 @@ function HelloChefBooking() {
     <Container>
       <Row>
         <Col>
-          <h1>Select a Chef from our award-winning team:</h1>
+          <h1 className="text-underlined text-center mb-5">Select a Chef from our award-winning team</h1>
         </Col>
       </Row>
       <Row>

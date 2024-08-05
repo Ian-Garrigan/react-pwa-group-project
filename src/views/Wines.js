@@ -26,7 +26,7 @@ function Wines(){
         </Col>
         <Col className="justify-content-center align-items-center text-center" lg={6}>
           <WinePairing />
-          <Link to="/Booking">
+          <Link to="/HelloChefBooking">
         <Button className="button">Proceed to booking</Button>
         </Link>
         <br></br>

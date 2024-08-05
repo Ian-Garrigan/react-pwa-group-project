@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col, Button } from 'react-bootstrap';
 
-function ChefCards({ chefs }) {
+function ChefCards({ chefs, onSelectChef }) {
   return (
     <Col md={4} className="mb-4">
       <Card>
@@ -14,6 +14,9 @@ function ChefCards({ chefs }) {
           <Card.Text>
             Cuisine: <b>{chefs.cuisine}</b>
           </Card.Text>
+          <Button className="button" onClick={() => onSelectChef(chefs)}>
+            Select Chef
+          </Button>
         </Card.Body>
       </Card>
     </Col>

@@ -20,8 +20,8 @@ return (
       </Row>
       <Row className="text-center">
         <Col>
-          <Link to="/Booking">
-            <Button className="button">Book Now</Button> {/* redirect to bookings page btn */}
+          <Link to="/Wines">
+            <Button className="button">See Wines</Button> {/* redirect to bookings page btn */}
           </Link>
           <br></br>
           <br></br>
