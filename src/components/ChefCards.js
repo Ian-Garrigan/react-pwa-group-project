@@ -13,7 +13,7 @@ function ChefCards({ chefs, onSelectChef }) {
         <Card.Body>
           <Card.Title>{chefs.name}</Card.Title>
           <Card.Text>
-            Recipes: <b>{chefs.recipesCount}</b>
+            Recipes: <b>{chefs.recipesNum}</b>
           </Card.Text>
           <Card.Text>
             Cuisine: <b>{chefs.cuisine}</b>
