@@ -59,6 +59,7 @@ function BookingSection() {
       },
     ];
   
+    // Function to handle selecting a chef
     const handleSelectChef = (chef) => {
         if (selectedChef) {
           toast.error("A chef is already selected. Please reload the page to select a different chef.");

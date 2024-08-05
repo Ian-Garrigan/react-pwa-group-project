@@ -1,5 +1,9 @@
+// Author Ian Garrigan 5th August
+
 import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
+
+// display individual chef information
 
 function ChefCards({ chefs, onSelectChef }) {
   return (

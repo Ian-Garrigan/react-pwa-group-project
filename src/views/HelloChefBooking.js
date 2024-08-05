@@ -1,3 +1,5 @@
+// Author Ian Garrigan 5th August
+
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import BookingSection from "../components/BookingSection";
