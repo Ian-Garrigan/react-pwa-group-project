@@ -2,6 +2,9 @@
 //Date 5th August 2024
 //Filename: DessertInfo.js
 
+
+// This file contains the component for displaying the desserts available
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Button, Row, Col, Card, Container } from 'react-bootstrap';
