@@ -1,59 +1,34 @@
-/*Filename:Desserts.js*/
+// Author: Ian Garrigan
+//Date 5th August 2024
+//Filename: Desserts.js
 
-import Container from 'react-bootstrap/Container';
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
-function Dessert(){
+import { Row, Col, Button, Container } from "react-bootstrap";
+import DessertInfo from "../components/DessertInfo";
+import { Link } from "react-router-dom";
 
-  const [desserts, setDesserts] = useState([]);
-
-  useEffect(() => {
-    var fetchData = async () => {
-      var dessertList = await axios.get('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
-      console.log(dessertList.data.meals);
-      setDesserts(dessertList.data.meals);
-    }
-
-    fetchData();
-  }, []);
-
-  return(
+function Desserts() {
+return (
     <Container fluid>
       <Row>
-        <Col>
-        <h1>Dessert API...</h1>
+        <Col lg={2}></Col>
+        <Col lg={8}>
+          <h1 className="heading text-underlined text-center">Our Desserts</h1>
+          <DessertInfo /> {/* all desserts available */}
         </Col>
-
+        <Col lg={3}></Col>
+      </Row>
+      <Row className="text-center">
         <Col>
-
+          <Link to="/Starters">
+            <Button className="button">See Starters</Button> {/* redirect to starters btn */}
+          </Link>
+          <br></br>
+          <br></br>
         </Col>
-        <Row>
-            {
-              desserts.map(function (i, index) {
-                return (
-                  <Card key={index} style={{ width: '18rem' }}>
-                    <Card.Body>
-                      <Card.Img variant="top" src={i.strMealThumb} />
-                      <Card.Title>{i.strMeal}</Card.Title>
-                      <Card.Text>
-                        Meal ID: {i.idMeal}
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                      <a href={`https://www.themealdb.com/meal/${i.idMeal}`} target='_blank'>Link</a>
-                    </Card.Body>
-                  </Card>
-                );
-              })
-            }
-        </Row>
       </Row>
     </Container>
-  )
-};
+  );
+}
 
-export default Dessert;
+export default Desserts;
