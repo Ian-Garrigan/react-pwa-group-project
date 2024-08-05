@@ -12,7 +12,7 @@ import Starters from './views/Starters';
 import Mains from './views/Mains';
 import Desserts from './views/Desserts';
 import Wines from './views/Wines';
-import Booking from './views/Booking';
+import HelloChefBooking from './views/HelloChefBooking';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
                 <Nav.Link as={Link} to="/Mains">Mains</Nav.Link>
                 <Nav.Link as={Link} to="/Desserts">Desserts</Nav.Link>
                 <Nav.Link as={Link} to="/Wines">Wines</Nav.Link>
-                <Nav.Link as={Link} to="/Booking">Booking</Nav.Link>
+                <Nav.Link as={Link} to="/HelloChefBooking">Booking</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -43,7 +43,7 @@ function App() {
           <Route path="Mains" element={<Mains />} />
           <Route path="Desserts" element={<Desserts />} />
           <Route path="Wines" element={<Wines />} />
-          <Route path="Booking" element={<Booking />} />
+          <Route path="HelloChefBooking" element={<HelloChefBooking />} />
 
         </Routes>
       </Router>
